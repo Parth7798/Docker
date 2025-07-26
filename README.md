@@ -2,26 +2,37 @@
 
 ## 📚 Index
 
-1. [Docker Build Commands](#1-docker-build-commands)  
-2. [Docker Clean Up Commands](#2-docker-clean-up-commands)  
-3. [Container Interaction Commands](#3-container-interaction-commands)  
-4. [Image Commands](#4-image-commands)  
-5. [Container Inspection Commands](#5-container-inspection-commands)  
-6. [Docker Run Commands](#6-docker-run-commands)  
-7. [Docker Registry Commands](#7-docker-registry-commands)  
-8. [Docker Network Commands](#8-docker-network-commands)  
-9. [Docker Service Commands](#9-docker-service-commands)  
-10. [Docker Volume Commands](#10-docker-volume-commands)  
-11. [Docker Swarm Commands](#11-docker-swarm-commands)  
-12. [Docker Filesystem Commands](#12-docker-filesystem-commands)  
-13. [Docker Environment Variables](#13-docker-environment-variables)  
-14. [Docker Health Checks](#14-docker-health-checks)  
-15. [Docker Compose Commands](#15-docker-compose-commands)  
-16. [Docker Stats](#16-docker-stats)
-17. [Docker Compose Commands](#15-docker-compose-commands)  
-18. [Docker Stats](#16-docker-stats) 
+1.​ Docker Build Commands
 
+2.​ Docker Clean Up Commands
 
+3.​ Container Interaction Commands
+
+4.​ Image Commands
+
+5.​ Container Inspection Commands
+
+6.​ Docker Run Commands
+
+7.​ Docker Registry Commands
+
+8.​ Docker Network Commands
+
+9.​ Docker Service Commands
+
+10.​Docker Volume Commands
+
+11.​Docker Swarm Commands
+
+12.​Docker Filesystem Commands
+
+13.​Docker Environment Variables
+
+14.​Docker Health Checks
+
+15.​Docker Compose Commands
+
+16.​Docker Stats
 
 
 
