@@ -36,6 +36,8 @@
 
 
 
+
+
 1.​ Docker Build Commands:
 
 
@@ -49,7 +51,7 @@
 2.​ Docker Clean Up Commands:
 
 
-| Commands  | TDescription  |
+| Commands  | Description  |
 | --- | --- |
 | docker system prune  | Remove all unused Docker resources, <br>including containers, images, networks, <br>and volumes.  |
 | R docker container prune  | Remove all stopped containers.  |
@@ -85,7 +87,7 @@
 5.​ Container Inspection Commands:
 
 
-| Commands  | TDescription  |
+| Commands  | Description  |
 | --- | --- |
 | docker ps  | List running containers.  |
 | docker ps -a  | List all containers, including stopped <br>ones.  |
@@ -152,7 +154,7 @@
 11.​Docker Swarm Commands:
 
 
-| Commands  | TDescription  |
+| Commands  | Description  |
 | --- | --- |
 | docker swarm init  | Initialize a Docker swarm on the current <br>node.  |
 | R docker swarm join  | Join a Docker swarm as a worker node.  |
