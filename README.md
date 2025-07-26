@@ -1,156 +1,215 @@
-# 🐳 Docker Cheat Sheet
+#  Docker Cheat Sheet
 
-A comprehensive, quick-reference guide covering essential Docker commands categorized for ease of use. Perfect for beginners and professionals managing containers, images, networks, and services in Docker environments.
+# INDEX
 
----
+1.​ Docker Build Commands 
 
-## 📚 Index
+2.​ Docker Clean Up Commands
 
-1. [Docker Build Commands](#1-docker-build-commands)  
-2. [Docker Clean Up Commands](#2-docker-clean-up-commands)  
-3. [Container Interaction Commands](#3-container-interaction-commands)  
-4. [Image Commands](#4-image-commands)  
-5. [Container Inspection Commands](#5-container-inspection-commands)  
-6. [Docker Run Commands](#6-docker-run-commands)  
-7. [Docker Registry Commands](#7-docker-registry-commands)  
-8. [Docker Network Commands](#8-docker-network-commands)  
-9. [Docker Service Commands](#9-docker-service-commands)  
-10. [Docker Volume Commands](#10-docker-volume-commands)  
-11. [Docker Swarm Commands](#11-docker-swarm-commands)  
-12. [Docker Filesystem Commands](#12-docker-filesystem-commands)  
-13. [Docker Environment Variables](#13-docker-environment-variables)  
-14. [Docker Health Checks](#14-docker-health-checks)  
-15. [Docker Compose Commands](#15-docker-compose-commands)  
-16. [Docker Stats](#16-docker-stats)  
+3.​ Container Interaction Commands
 
----
+4.​ Image Commands 
 
-## 1. Docker Build Commands
+5.​ Container Inspection Commands 
 
-| Command | Description |
-|--------|-------------|
-| `docker build -t <image_name> .` | Build image from Dockerfile in current directory |
-| `docker build --no-cache -t <image_name> .` | Build image without cache |
-| `docker build -f <dockerfile_name> -t <image_name> .` | Build using specified Dockerfile |
+6.​ Docker Run Commands 
 
----
+7.​ Docker Registry Commands 
 
-## 2. Docker Clean Up Commands
+8.​ Docker Network Commands 
 
-| Command | Description |
-|--------|-------------|
-| `docker system prune` | Remove all unused data |
-| `docker container prune` | Remove stopped containers |
-| `docker image prune` | Remove unused images |
-| `docker volume prune` | Remove unused volumes |
-| `docker network prune` | Remove unused networks |
+9.​ Docker Service Commands 
 
----
+10.​Docker Volume Commands 
 
-## 3. Container Interaction Commands
+11.​Docker Swarm Commands 
 
-| Command | Description |
-|--------|-------------|
-| `docker run <image_name>` | Run a container |
-| `docker start <container_id>` | Start a container |
-| `docker stop <container_id>` | Stop a container |
-| `docker restart <container_id>` | Restart a container |
-| `docker exec -it <container_id> <command>` | Run command in running container |
+12.​Docker Filesystem Commands 
 
----
+13.​Docker Environment Variables 
 
-## 4. Image Commands
+14.​Docker Health Checks
 
-| Command | Description |
-|--------|-------------|
-| `docker images` | List images |
-| `docker pull <image_name>` | Download image |
-| `docker push <image_name>` | Upload image |
-| `docker rmi <image_id>` | Remove image |
+15.​Docker Compose Commands 
 
----
+16.​Docker Stats 
 
-## 5. Container Inspection Commands
 
-| Command | Description |
-|--------|-------------|
-| `docker ps` | List running containers |
-| `docker ps -a` | List all containers |
-| `docker logs <container_id>` | View container logs |
-| `docker inspect <container_id>` | View detailed container info |
 
----
+1.​ Docker Build Commands:
 
-## 6. Docker Run Commands
 
-| Command | Description |
-|--------|-------------|
-| `docker run -d <image_name>` | Run in detached mode |
-| `docker run -p <host_port>:<container_port> <image_name>` | Map ports |
-| `docker run -v <host_path>:<container_path> <image_name>` | Mount volume |
-| `docker run --name <container_name> <image_name>` | Name the container |
+| Commands  | Description  |
+| --- | --- |
+| docker build -t &lt;image_name&gt; .  | Build a Docker image using the Dockerfile in the current directory.  |
+| docker build --no-cache -t <br>&lt;image_name&gt; .  | Build a Docker image without using the <br>cache.  |
+| docker build -f &lt;dockerfile_name&gt; -t <br>&lt;image_name&gt; .  | Build a Docker image using a specified <br>Dockerfile.  |
 
----
 
-## 7. Docker Registry Commands
+2.​ Docker Clean Up Commands:
 
-| Command | Description |
-|--------|-------------|
-| `docker login` | Log into registry |
-| `docker logout` | Log out of registry |
-| `docker search <term>` | Search registry |
-| `docker pull <registry>/<image_name>` | Pull from registry |
 
----
+| Commands  | TDescription  |
+| --- | --- |
+| docker system prune  | Remove all unused Docker resources, <br>including containers, images, networks, <br>and volumes.  |
+| R docker container prune  | Remove all stopped containers.  |
+| docker image prune  | Remove unused images.  |
+| docker volume prune  | Remove unused volumes.  |
+| A docker network prune  | Remove unused networks.  |
 
-## 8. Docker Network Commands
 
-| Command | Description |
-|--------|-------------|
-| `docker network create <name>` | Create network |
-| `docker network ls` | List networks |
-| `docker network inspect <name>` | Inspect network |
-| `docker network connect <network> <container>` | Connect container to network |
+3.​ Container Interaction Commands:
 
----
 
-## 9. Docker Service Commands
+| Commands  | Description  |
+| --- | --- |
+| docker run &lt;image_name&gt;  | Run a Docker image as a container.  |
+| docker start &lt;container_id&gt;  | Start a stopped container.  |
+| docker stop &lt;container_id&gt;  | Stop a running container.  |
+| docker restart &lt;container_id&gt;  | Restart a running container.  |
+| docker exec -it &lt;container_id&gt; <br>&lt;command&gt;  | Execute a command inside a running <br>container interactively.  |
 
-| Command | Description |
-|--------|-------------|
-| `docker service create --name <name> <image>` | Create a service |
-| `docker service ls` | List services |
-| `docker service scale <name>=<replicas>` | Scale service |
-| `docker service logs <name>` | View service logs |
 
----
 
-## 10. Docker Volume Commands
+4.​ Image Commands: 
 
-| Command | Description |
-|--------|-------------|
-| `docker volume create <name>` | Create volume |
-| `docker volume ls` | List volumes |
-| `docker volume inspect <name>` | Inspect volume |
-| `docker volume rm <name>` | Remove volume |
 
----
+| Commands  | Description  |
+| --- | --- |
+| docker images  | List available Docker images.  |
+| docker pull &lt;image_name&gt;  | Pull a Docker image from a Docker <br>registry.  |
+| docker push &lt;image_name&gt;  | Push a Docker image to a Docker <br>registry.  |
+| docker rmi &lt;image_id&gt;  | Remove a Docker image.  |
 
-## 11. Docker Swarm Commands
 
-| Command | Description |
-|--------|-------------|
-| `docker swarm init` | Init Swarm |
-| `docker swarm join` | Join Swarm |
-| `docker node ls` | List Swarm nodes |
-| `docker service create` | Create Swarm service |
-| `docker service scale` | Scale Swarm service |
+5.​ Container Inspection Commands:
 
----
 
-## 12. Docker Filesystem Commands
+| Commands  | TDescription  |
+| --- | --- |
+| docker ps  | List running containers.  |
+| docker ps -a  | List all containers, including stopped <br>ones.  |
+| R docker logs &lt;container_id&gt;  | Fetch the logs of a specific container.  |
+| docker inspect &lt;container_id&gt;  | Inspect detailed information about a <br>container.  |
 
-| Command | Description |
-|--------|-------------|
-| `docker cp <container>:<path> <host>` | Copy from container |
-| `docker cp <host
+
+6.​ Docker Run Commands:
+
+
+| PCommands  | Description  |
+| --- | --- |
+| docker run -d &lt;image_name&gt;  | Run a Docker image as a container in <br>detached mode.  |
+| docker run -p &lt;host_port&gt;:&lt;container_port&gt; &lt;image_name&gt;  | Publish container ports to the host.  |
+| docker run -v <br>&lt;host_path&gt;:&lt;container_path&gt; <br>&lt;image_name&gt;  | Mount a host directory or volume to a <br>container.  |
+| docker run --name &lt;container_name&gt; <br>&lt;image_name&gt;  | Assign a custom name to the container.  |
+
+
+7.​ Docker Registry Commands: 
+
+
+| Commands  | Description  |
+| --- | --- |
+| docker login  | Log in to a Docker registry.  |
+| docker logout  | Log out from a Docker registry.  |
+| docker search &lt;term&gt;  | Search for Docker images in a Docker <br>registry.  |
+| docker pull &lt;registry&gt;/&lt;image_name&gt;  | Pull a Docker image from a specific <br>registry.  |
+
+
+8.​ Docker Network Commands:
+
+
+| Commands  | Description  |
+| --- | --- |
+| docker network create &lt;network_name&gt;  | Create a Docker network.  |
+| R docker network ls  | List available Docker networks.  |
+| docker network inspect &lt;network_name&gt;  | Inspect detailed information about a <br>Docker network.  |
+| d&lt;ococknetar inneertw_Anoarkm ceo&gt;n nect &lt;network_name&gt;  | Connect a container to a Docker network.  |
+
+
+9.​ Docker Service Commands:
+
+
+| Commands  | Description  |
+| --- | --- |
+| docker service create --name <br>&lt;service_name&gt; &lt;image_name&gt;  | Create a Docker service from an image.  |
+| docker service ls  | List running Docker services.  |
+| docker service scale <br>&lt;service_name&gt;=&lt;replicas&gt;  | Scale the replicas of a Docker service.  |
+| docker service logs &lt;service_name&gt;  | View logs of a Docker service.  |
+
+
+
+10.​ Docker Volume Commands:
+
+
+| Commands  | Description  |
+| --- | --- |
+| docker volume create &lt;volume_name&gt;  | Create a Docker volume.  |
+| docker volume ls  | List available Docker volumes.  |
+| docker volume inspect &lt;volume_name&gt;  | Inspect detailed information about a <br>Docker volume.  |
+| docker volume rm &lt;volume_name&gt;  | H Remove a Docker volume.  |
+
+
+11.​Docker Swarm Commands:
+
+
+| Commands  | TDescription  |
+| --- | --- |
+| docker swarm init  | Initialize a Docker swarm on the current <br>node.  |
+| R docker swarm join  | Join a Docker swarm as a worker node.  |
+| docker node ls  | List the nodes in a Docker swarm.  |
+| docker service create  | Create a service in the Docker swarm.  |
+| A docker service scale  | Scale the replicas of a service in the <br>Docker swarm.  |
+
+
+P12.​Docker Filesystem Commands:
+
+
+| Commands  | Description  |
+| --- | --- |
+| docker cp <br>&lt;container_id&gt;:&lt;container_path&gt; <br>&lt;host_path&gt;  | Copy files from a container to the host.  |
+| docker cp &lt;host_path&gt; <br>&lt;container_id&gt;:&lt;container_path&gt;  | Copy files from the host to a container.  |
+
+
+
+13.​Docker Environment Variables:
+
+
+| Commands  | Description  |
+| --- | --- |
+| -e or --env  | Set environment variables when running <br>a container.  |
+| docker run -e &lt;variable_name&gt;=&lt;value&gt; &lt;image_name&gt;  | Set an environment variable when <br>running a container.  |
+
+
+14.​Docker Health Checks:
+
+
+| Commands  | Description  |
+| --- | --- |
+| HEALTHCHECK instruction  | TDefine a command to check the health of <br>a container.  |
+| docker container inspect --format='{{json .State.Health}}' &lt;container_name&gt;  | Check the health status of a container.  |
+
+
+15.​Docker Compose Commands:
+
+
+| Commands  | Description  |
+| --- | --- |
+| A docker-compose up  | Create and start containers defined in a <br>Docker Compose file.  |
+| P docker-compose down  | Stop and remove containers defined in a Docker Compose file.  |
+| docker-compose ps  | List containers defined in a Docker <br>Compose file.  |
+| docker-compose logs  | View logs of containers defined in a <br>Docker Compose file.  |
+
+
+**16. Docker Stats:**
+
+
+| Commands  | Description  |
+| --- | --- |
+| docker stats  | Display a live stream of resource usage<br>by containers.  |
+| docker stats &lt;container_name&gt; | Display the resource usage of a specific<br>container.  |
+
+
+
+
+
+
